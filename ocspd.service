@@ -1,0 +1,15 @@
+[Unit]
+Description=Online Certificate Status Protocol daemon
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/etc/default/ocspd
+ExecStart=/usr/bin/openssl ocsp -port $PORT -text -index $INDEX_FILE -CA $CACHAIN_FILE -rkey $OCSPKEY_FILE -rsigner $OCSPCERT_FILE
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
