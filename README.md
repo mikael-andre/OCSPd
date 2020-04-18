@@ -7,6 +7,7 @@ Before making anything, you must follow this [tutorial](https://jamielinux.com/d
 * OCSP private key
 * OCSP certificate signin request
 * OCSP certificate
+The operating system is Ubuntu server 18.04.4 LTS
 ## Installation
 #### Download needed files
 You need to download two files in your home directory:
@@ -25,6 +26,11 @@ sudo cp -p ocspd /etc/default/ocspd
 The init script needs excute rights:
 ```
 chmod 664 /etc/systemd/system/ocspd.service 
+```
+#### Create log file
+In order to log requests and responses, you have to create a new log file in /var/log folder by the following command:
+```
+touch /var/log/ocspd.log
 ```
 #### Reload Systemd
 After giving theses privileges, you have to reload systemd
