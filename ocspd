@@ -1,10 +1,14 @@
-# Index file of intermediate certificate authority
+# Number of minutes before next update
+INTERVAL=1
+# Certificate status index file
 INDEX_FILE=/root/ca/intermediate/index.txt
-# File containing Root & Intermediate certificate authority
+# CA certificate
 CACHAIN_FILE=/root/ca/intermediate/certs/cachaincert.pem
-# OCSP private key without password
+# Responder key to sign responses with
 OCSPKEY_FILE=/root/ca/intermediate/private/newocspkey.pem
-# OCSP certificate
+# Responder certificate to sign responses with
 OCSPCERT_FILE=/root/ca/intermediate/certs/ocspcert.pem
-# OCSP responder port
+# Port to run responder on
 PORT=2560
+# Output filename
+LOG_FILE=/var/log/ocspd.log
