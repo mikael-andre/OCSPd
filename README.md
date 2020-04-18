@@ -7,6 +7,7 @@ Before making anything, you must follow this [tutorial](https://jamielinux.com/d
 * OCSP private key
 * OCSP certificate signin request
 * OCSP certificate
+
 The operating system is Ubuntu server 18.04.4 LTS
 ## Installation
 #### Download needed files
@@ -17,7 +18,7 @@ wget https://raw.githubusercontent.com/mikael-andre/OCSPd/master/ocspd.service
 wget https://raw.githubusercontent.com/mikael-andre/OCSPd/master/ocspd
 ```
 #### Copy files
-Once downloaded, you have to copy init script in /etc/systemd/system and configuration file in /etc/default:
+Once downloaded, you have to copy init script in `/etc/systemd/system` and configuration file in `/etc/default`:
 ```
 sudo cp -p ocspd.service /etc/systemd/system/ocspd.service
 sudo cp -p ocspd /etc/default/ocspd
@@ -28,7 +29,7 @@ The init script needs excute rights:
 chmod 664 /etc/systemd/system/ocspd.service 
 ```
 #### Create log file
-In order to log requests and responses, you have to create a new log file in /var/log folder by the following command:
+In order to log requests and responses, you have to create a new log file in `/var/log` folder by the following command:
 ```
 touch /var/log/ocspd.log
 ```
