@@ -4,7 +4,7 @@ This how-to aims to start Online Certificate Status Protocol responder as a daem
 Before making anything, you must follow this [tutorial](https://jamielinux.com/docs/openssl-certificate-authority/index-full.html) to create the following items:
 * Root Certificate Authority
 * Intermediate Certificate Authority
-* OCSP private key
+* OCSP private key without password [Feedback](https://github.com/mikael-andre/OCSPd/issues/1)
 * OCSP certificate signin request
 * OCSP certificate
 
